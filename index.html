@@ -1,34 +1,30 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title class="title">يوم في رمضان</title>
   <link rel="stylesheet" href="style.css">
-  <link 
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" 
-  rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 </head>
-
 <body>
   <img class="background" src="./imgs/r3.jfif"></img>
   <div id="input-container" class="input-container">
     <input id="todo-text" placeholder="أكتب هنا أسم العمل..." type="text">
-    <div class="select-pir">  
-      <div>أختر الأهمية : </div>  
+    <div class="select-pir">
+      <div>أختر الأهمية : </div>
       <select id="pir-list">
-      <option>
-        اتمني اعمله
-      </option>
-      <option>
-        عاوز اعمله
-      </option>
-      <option>
-        لازم اعمله
-      </option>
-     </select>
+        <option>
+          اتمني اعمله
+        </option>
+        <option>
+          عاوز اعمله
+        </option>
+        <option>
+          لازم اعمله
+        </option>
+      </select>
     </div>
     <button id="add-btn" onclick="addTodoFromTextbox();">إضافة</button>
   </div>
@@ -48,5 +44,4 @@
 
   <script src="script.js"></script>
 </body>
-
 </html>
