@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+:root{
+  --cyan : #8ecae6;
+  --blue : #219ebc;
+  --dark-blue : #023047;
+  --honey-yellow : #ffb703;
+  --orange : #fb8500;
+
+  --white : #fffee0;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: IBM Plex Sans Arabic, Helvetica, sans-serif;
+  transition: .2s;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+html, body {
+  height: 100%; 
+}
+
+body{
+  background-color: var(--white);
+  /* border: 5px solid red; */
+}
+
+.background{
+ position: fixed;
+ width: 105%;
+ height: 105%;
+ bottom: 50%;
+ right: 50%;
+ z-index: -5;
+ transform: translate(50%, 50%);
+ filter: blur(10px);
+ -webkit-filter: blur(10px);
+ object-position: center;
+ object-fit: cover;
+}
+
+.layer{
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: #00000070;
+  z-index: 1;
+}
+
+#add-todo{
+  border: none;
+  padding: 5px 10px;
+  font-size: 1.02rem;
+  background-color: transparent;
+  padding: 5px 10px;
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  color: var(--honey-yellow);
+}
+
+    .input-container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position :fixed;
+      top: 50%;
+      left: 50%; 
+      transform:  scale(0);
+      z-index: 2;
+      padding: 10px;
+      gap: 0.5rem;
+      border-radius: 7px;
+      transition: all 1s;
+    }
+    .select-pir > div{
+      display: inline-block;
+      padding: 0 5px;
+      color: var(--dark-blue);
+      font-size: 1.1rem;
+    }
+
+    .select-pir #pir-list{
+      border: 1px solid var(--orange);
+      /* border: none; */
+      border-radius: 3px;
+      font-size: 1.05rem;
+      color: var(--dark-blue);
+      background-color: var(--honey-yellow);
+    }
+
+    #add-btn{
+      border: none;
+      padding: 5px 10px;
+      transition: .2s;
+      border-radius: 4px;
+      background-color: var(--blue);
+      color: var(--dark-blue);
+      font-weight: 600;
+      font-size : 1.1rem;
+    }
+
+    #add-btn:hover{
+      background-color: var(--cyan);
+    }
+
+    #todo-text{
+      line-height: 30px;
+      background-color: var(--white);
+      outline: none;
+      border: 1px solid rgba(50, 50, 50, 0.2);
+      border-radius: 5px;
+      padding-left: 2px;
+      padding-right: 2px;
+      transition: .2s;
+      color: var(--dark-blue);
+    }
+    #todo-text::placeholder{
+      padding-right: 5px;
+      color: #00000066;
+      font-weight: 400;
+    }
+
+.list{
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-bottom: 20px;
+}
+
+#list-holder{
+  padding-top: 20px;
+  color: var(--honey-yellow);
+  font-weight: 500;
+  font-size: 1.04rem;
+  padding: 20px 3% 0 3%;
+}
+#list-holder h2{
+  background-color: var(--cyan);
+  text-align: center;
+  position: relative;
+  right: 50%;
+  transform: translate(50%, 0);
+  color: var(--dark-blue);
+  border-radius: 8px 8px 0px 0px;
+  display: inline-block;
+  padding: 5px 10px;
+}
+
+.list > div{
+  background-color: var(--dark-blue);
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 2px;
+  margin-bottom: 5px;
+  padding: 8px 5px;
+  box-shadow: 0 1px 2px #00000015;
+}
+
+.list > div .holder{
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.list > div button{
+  margin-right: 10px;
+  margin-left: 10px;
+  border: none;
+  background-color: transparent;
+  font-size: .8rem;
+}
+
+.list > div button:hover  ~ .holder{
+  background-color: gray;
+}
+
+.list > div .text{
+  margin-right: 7px;
+  flex: 1;
+  display: grid;
+  align-content: center;
+  transition: .2s;
+}
+
+.list > div input{
+  margin-right: 5px;
+  height: 10px;
+  transition: .15s;
+}
+
+.list > div input:checked + .text{
+  text-decoration: line-through;
+  color: #767678;
+}
+
+@media (min-width : 900px){
+ .background{
+  content :url("./imgs/rr1.jfif");
+ }
+
+ /* #add-todo{
+  border: none;
+  padding: 5px 10px;
+  font-size: 1.02rem;
+  background-color: transparent;
+  padding: 5px 10px;
+  color: var(--honey-yellow);
+  display: inline-block;
+  background-color: var(--dark-blue);
+  height: 50px;
+  width: 80%;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px #00000015;
+ } */
+}
